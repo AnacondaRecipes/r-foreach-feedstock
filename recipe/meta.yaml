@@ -1,4 +1,4 @@
-{% set version = '1.4.3' %}
+{% set version = '1.4.4' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/foreach_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/foreach/foreach_{{ version }}.tar.gz
-  sha256: 1ef03f770f726a62e3753f2402eb26b226245958fa99d570d003fc9e47d35881
+  sha256: c0a71090d5b70b9a95a6936091dabae9c26e1fc6b9609bfe5fb6346033905e48
 
 
   # patches:
@@ -21,7 +21,7 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build number.
-  number: 4
+  number: 0
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -74,23 +74,23 @@ extra:
 # Package: foreach
 # Type: Package
 # Title: Provides Foreach Looping Construct for R
-# Version: 1.4.3
-# Authors@R: c(person("Rich", "Calaway", role="cre", email="richcala@microsoft.com"), person("Revolution", "Analytics", role=c("aut", "cph")), person("Steve", "Weston", role="aut"))
+# Version: 1.4.4
+# Authors@R: c(person("Rich", "Calaway", role="cre", email="richcala@microsoft.com"), person("Microsoft", role=c("aut", "cph")), person("Steve", "Weston", role="aut"))
 # Description: Support for the foreach looping construct.  Foreach is an idiom that allows for iterating over elements in a collection, without the use of an explicit loop counter.  This package in particular is intended to be used for its return value, rather than for its side effects.  In that sense, it is similar to the standard lapply function, but doesn't require the evaluation of a function.  Using foreach without side effects also facilitates executing the loop in parallel.
 # Depends: R (>= 2.5.0)
 # Imports: codetools, utils, iterators
 # Suggests: randomForest
 # Enhances: compiler, doMC, RUnit, doParallel
 # License: Apache License (== 2.0)
-# Author: Rich Calaway [cre], Revolution Analytics [aut, cph], Steve Weston [aut]
+# Author: Rich Calaway [cre], Microsoft [aut, cph], Steve Weston [aut]
 # Maintainer: Rich Calaway <richcala@microsoft.com>
 # Repository: CRAN
 # Repository/R-Forge/Project: foreach
-# Repository/R-Forge/Revision: 27
-# Repository/R-Forge/DateTimeStamp: 2015-10-12 01:37:31
-# Date/Publication: 2015-10-13 09:12:53
+# Repository/R-Forge/Revision: 31
+# Repository/R-Forge/DateTimeStamp: 2017-12-08 23:08:19
+# Date/Publication: 2017-12-12 22:37:36 UTC
 # NeedsCompilation: no
-# Packaged: 2015-10-12 02:26:29 UTC; rforge
+# Packaged: 2017-12-08 23:33:48 UTC; rforge
 
 # See
 # http://docs.continuum.io/conda/build.html for
